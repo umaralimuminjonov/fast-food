@@ -1,0 +1,27 @@
+<%- include("../header") %> <%- include("../sidebar") %>
+<!--Container Main start-->
+<main class="main">
+  <section class="category section" id="category">
+    <h1 class="mt-4 mb-4">Show</h1>
+    <a
+      data-ripplet
+      href="/category/:id/update"
+      class="btn btn-outline-primary mb-4"
+      >Edit
+    </a>
+    <a
+      data-ripplet
+      href="/category/:id/delete"
+      class="btn btn-outline-danger mb-4"
+      >Delete
+    </a>
+    <div class="category_content mb-4">
+      <h6>Name</h6>
+      <h5><%= category.name %></h5>
+    </div>
+    <div class="category_content mb-4">
+      <h6>Created At</h6>
+      <h5 class="mb-4"><%= category.createdAt.toLocaleString() %></h5>
+    </div>
+  </section>
+</main>

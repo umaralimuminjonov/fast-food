@@ -1,0 +1,23 @@
+GET http://localhost:2000/
+
+
+###
+
+
+POST http://localhost:2000/category
+content-type: application/json
+
+{
+  "name": "Set"
+}
+
+
+###
+
+
+PUT http://localhost:2000/api/customers/611ccb34849cc91e08a7bff8
+content-type: application/json
+
+{
+  "name": "User03"
+}

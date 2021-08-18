@@ -1,0 +1,22 @@
+<%- include("../header") %> <%- include("../sidebar") %>
+<!--Container Main start-->
+<main class="main">
+  <section class="category section" id="category">
+    <h1 class="mt-4 mb-4">Create new</h1>
+    <form action="/category/new" method="POST">
+      <div class="form-group">
+        <label class="form_label" for="name">Title</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          class="form-control mb-3"
+          placeholder="Enter title"
+        />
+      </div>
+      <button data-ripplet type="submit" class="btn btn-primary btn-block mb-4">
+        Save
+      </button>
+    </form>
+  </section>
+</main>

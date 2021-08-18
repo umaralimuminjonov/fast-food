@@ -1,0 +1,50 @@
+<%- include("../header") %> <%- include("../sidebar") %>
+<!--Container Main start-->
+<main class="main">
+  <section class="foods section" id="foods">
+    <h1 class="mt-4 mb-4">Create new</h1>
+    <form action="/foods/new" method="POST">
+      <div class="form-group">
+        <label class="form_label" for="name">Title</label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          class="form-control mb-3"
+          placeholder="Enter title"
+        />
+      </div>
+      <div class="form-group">
+        <label class="form_label" for="name">Product id</label>
+        <input
+          type="text"
+          id="product_id"
+          name="product_id"
+          class="form-control mb-3"
+          placeholder="Enter product id"
+        />
+      </div>
+      <div class="form-group">
+        <label class="form_label" for="name">Price</label>
+        <input
+          type="text"
+          id="price"
+          name="price"
+          class="form-control mb-3"
+          placeholder="Enter price"
+        />
+      </div>
+      <div class="form-group">
+        <label for="form-select" class="form-label">Category</label>
+        <select name="category" class="form-select mb-4" id="form-select">
+          <% categories.forEach(category => { %>
+            <option value="<%= category._id %>"><%= category.name %></option>
+          <% }) %>
+        </select>
+      </div>
+      <button data-ripplet type="submit" class="btn btn-primary btn-block mb-4">
+        Save
+      </button>
+    </form>
+  </section>
+</main>
